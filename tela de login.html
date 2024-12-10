@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela de Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('./assset/image/PlayWire.png'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px); /* Desenfoque del fondo */
+        }
+
+        .login-container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px); /* Desenfoque adicional para el contenedor */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .login-container h1 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .login-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .login-container input:focus {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 1rem 0 0;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(120deg, #ff512f, #dd2476);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .login-container button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Barra lateral para selección de idioma */
+        .language-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .language-sidebar img {
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            margin: 5px 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .language-sidebar img:hover {
+            opacity: 0.7;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 1.5rem;
+            }
+
+            .login-container h1 {
+                font-size: 1.5rem;
+            }
+
+            .language-sidebar img {
+                width: 30px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <div class="language-sidebar">
+        <!-- Botones con las banderas para cambiar el idioma -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English" onclick="changeLanguage('en')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Español" onclick="changeLanguage('es')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Português" onclick="changeLanguage('pt')">
+    </div>
+
+    <div class="login-container">
+        <h1 id="login-title">Login</h1>
+        <form>
+            <input type="text" placeholder="" id="username-placeholder" required>
+            <input type="password" placeholder="" id="password-placeholder" required>
+            <button type="submit" id="submit-button">Sign In</button>
+        </form>
+    </div>
+
+    <script>
+        const languageData = {
+            en: {
+                loginTitle: "Login",
+                usernamePlaceholder: "Username",
+                passwordPlaceholder: "Password",
+                submitButton: "Sign In"
+            },
+            es: {
+                loginTitle: "Iniciar sesión",
+                usernamePlaceholder: "Nombre de usuario",
+                passwordPlaceholder: "Contraseña",
+                submitButton: "Iniciar sesión"
+            },
+            pt: {
+                loginTitle: "Entrar",
+                usernamePlaceholder: "Nome de usuário",
+                passwordPlaceholder: "Senha",
+                submitButton: "Entrar"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById("login-title").innerText = languageData[lang].loginTitle;
+            document.getElementById("username-placeholder").placeholder = languageData[lang].usernamePlaceholder;
+            document.getElementById("password-placeholder").placeholder = languageData[lang].passwordPlaceholder;
+            document.getElementById("submit-button").innerText = languageData[lang].submitButton;
+        }
+    </script>
+</body>
+</html>

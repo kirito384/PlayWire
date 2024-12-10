@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&display=swap');
+
+ *{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+ }
+
+/* Definindo a animação de slide-in */
+@keyframes slideIn {
+0% {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0);
+    opacity: 1;
+}
+}
+
+/* Aplicando a animação ao texto */
+h1 {
+    font-size: 40px;
+    animation: slideIn 2s ease-out;
+}
+
+.navbar{
+    z-index: 100;
+    background-color: black
+}
+
+ body{
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(187, 187, 187) !important;
+ }
+
+ a{
+    color: aliceblue !important;
+ }
+ 
+img {
+    height: auto;
+}
+
+.container {
+    display: flex; /* Define o container como flexível */
+    gap: 20px; /* Espaço de 20px entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se quebrem para a próxima linha */
+}
+
+.image-section{
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-section img{
+    height: 500px;
+}
+
+/*imagem con texto*/
+
+.imagem-com-texto {
+    text-align: center; /* Alinha a imagem e o texto ao centro */
+    margin-top: 20px
+  }
+
+.imagem-com-texto p {
+    font-size: 25px;
+    color: #ffffff; /* Cor do texto */
+    margin-top: 19px; /* Espaçamento entre a imagem e o texto */
+    
+  }
+
+  .texto-port{
+    text-align: center;
+    font-size: 70px;
+    color: #ffffff;
+  }
+
+
+ .tamanho{
+    width: 300px;
+ }
+ .text{
+    text-align: center;
+    display: flex;
+ }
+
+        /*animação de imagem*/
+
+         /* Definindo a animação de fade-in */
+         @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Aplicando a animação à imagem */
+        img {
+            width: 300px;
+            height: auto;
+            animation: fadeIn 2s ease-in; /* Duração de 2 segundos */
+        }
+
+        /*animação de texto*/
+
+  /* Definindo a animação de slide-in */
+  @keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Aplicando a animação ao texto */
+h1 {
+    font-size: 40px;
+    animation: slideIn 2s ease-out;
+}
+
+
+/*animação de img*/
+.miku{
+    transform: translateY(0px);
+    filter: grayscale(0%);
+    transition: a11 0.2s;
+}
+
+.miku:hover{
+    transform: translateY(-10px);
+    filter: grayscale(50%);
+}
+
+.img:hover{
+    filter: grayscale(0); /* Colores al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.poco{
+    transition: filter 0.5s ease, transform 0.5s ease;
+    filter: grayscale(100%); /* Blanco y negro por defecto */
+}
+
+.poco:hover{
+    filter: grayscale(0); /* Colores al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/*texto pagina*/
+.texto-port{
+    margin-top: 50px;
+
+}
+
+/*img 3D*/
+
+.image-3d {
+    width: 300px;
+    height: 300px;
+
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(156, 156, 156, 0.753);
+    transform: translateZ(0) rotateX(15deg);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotateX(15deg);
+    }
+    50% {
+        transform: translateY(-20px) rotateX(15deg);
+    }
+    100% {
+        transform: translateY(0px) rotateX(15deg);
+    }
+}
+
+/*text 3D*/
+
+.text-3d {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 
+        0 5px 10px rgba(0, 0, 0, 0.5), 
+        0 10px 20px rgba(219, 219, 219, 0.993);
+    transform: translateZ(0) rotateX(10deg);
+    animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0% {
+        transform: translateY(0) rotateX(10deg);
+    }
+    50% {
+        transform: translateY(-20px) rotateX(10deg);
+    }
+    100% {
+        transform: translateY(0) rotateX(10deg);
+    }
+}
+
+/*trocar idioma*/
+
+/* Barra lateral para selección de idioma */
+.language-sidebar {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language-sidebar img {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: opacity 0.3s ease;
+}
+
+.language-sidebar img:hover {
+    opacity: 0.7;
+}
+
+/* Estilos generales de la página */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2, p {
+    color: #333;
+}
+
+/*fin de troca idioma*/
+
+/*rodape*/
+.footer {
+    background-color: #42424234;
+    color: white;
+    padding: 7px;
+    text-align: center;
+
+    bottom: 0;
+    width: 100%;
+}
+
+.footer img {
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.footer .tech-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: aliceblue;
+}
+/*fin do rodape*/
+
+/*img redes social*/
+.icon-footer{
+    width: 70px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+/*texto*/
+.papa{
+    color: aliceblue;
+}
+
+.color{
+    color: antiquewhite;
+}

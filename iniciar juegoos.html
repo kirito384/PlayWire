@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de jogos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;  /* Fondo oscuro */
+            color: #ecf0f1;  /* Texto claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Título */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ecf0f1;
+        }
+
+        /* Contenedor de las imágenes (flexbox) */
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Cada tarjeta de juego (Imagen a la izquierda, texto y enlaces a la derecha) */
+        .game-card {
+            display: flex;
+            align-items: center;
+            background-color: #5f646b;  /* Fondo oscuro para las tarjetas */
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Imagen del juego */
+        .game-card img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        /* Contenedor del texto */
+        .game-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        /* Nombre del juego */
+        .game-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Descripción del juego */
+        .game-description {
+            font-size: 1rem;
+            color: #bdc3c7;
+            margin-bottom: 15px;
+        }
+
+        /* Contenedor de los enlaces a la derecha */
+        .game-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Estilo de los enlaces */
+        .game-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .game-links a:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Galería De Jogos</h1>
+
+    <!-- Contenedor de juegos (13 imágenes) -->
+    <div class="game-container">
+        <!-- Juego 1 -->
+        <div class="game-card">
+            <img src="./assset/image/minecraft.png" alt="Juego 1">
+            <div class="game-text">
+                <div class="game-name">Minecraft</div>
+                <div class="game-description">"Explore, construa e sobreviva em um mundo <br>
+                     infinito de possibilidades." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/MmB9b5njVbA?si=dRiXLgQKmwYtY9D1" target="_blank">Trailer</a>
+                <a href="https://www.minecraft.net/pt-br/store/minecraft-deluxe-collection-pc" target="_blank">Comprar</a>
+                <a href="https://www.minecraft.net/pt-pt/about-minecraft" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 2 -->
+        <div class="game-card">
+            <img src="./assset/image/call of duty 200x150.jpg" alt="Juego 2">
+            <div class="game-text">
+                <div class="game-name">Call of duty</div>
+                <div class="game-description">"Intensidade, estratégia e ação em uma guerra <br>
+                     moderna que redefine o campo de batalha." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/i3IsLrPeZG8?si=lchlq40idAOldaPc" target="_blank">Trailer</a>
+                <a href="https://www.callofduty.com/br/pt/store/games/modernwarfare3" target="_blank">Comprar</a>
+                <a href="https://www.callofduty.com/br/pt/store/games/modernwarfare3" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 3 -->
+        <div class="game-card">
+            <img src="./assset/image/genshin 200x150.jpg" alt="Juego 3">
+            <div class="game-text">
+                <div class="game-name">Genshin impact</div>
+                <div class="game-description">"Explore um mundo mágico cheio de aventuras, <br>
+                     mistérios e conexões inesquecíveis." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/HLUY1nICQRY?si=Qqn2moe3IUzrNn5N" target="_blank">Trailer</a>
+                <a href="https://genshin.hoyoverse.com/pt/home" target="_blank">Baixar</a>
+                <a href="https://genshin.hoyoverse.com/pt/game" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 4 -->
+        <div class="game-card">
+            <img src="./assset/image/valorant 200x150.jpg" alt="Juego 4">
+            <div class="game-text">
+                <div class="game-name">Valorant</div>
+                <div class="game-description">"Precisão, estratégia e trabalho em equipe em <br>
+                    uma batalha tática cheia de estilo." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/e_E9W2vsRbQ?si=utK2A1Z3PokNcxON" target="_blank">Trailer</a>
+                <a href="https://playvalorant.com/pt-br/download/" target="_blank">Baixar</a>
+                <a href="https://playvalorant.com/pt-br/media/" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 5 -->
+        <div class="game-card">
+            <img src="./assset/image/fortnite 200x150.jpg" alt="Juego 5">
+            <div class="game-text">
+                <div class="game-name">Fortnite</div>
+                <div class="game-description">"Crie, lute e vença em um mundo onde tudo é possível."</div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/WJW-bzXZM8M?si=60jrRDbiCzHa_AaN" target="_blank">Trailer</a>
+                <a href="https://www.fortnite.com/download?lang=pt-BR" target="_blank">Baixar</a>
+                <a href="https://www.fortnite.com/news/fortnite-og-is-back-and-here-to-stay" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 6 -->
+        <div class="game-card">
+            <img src="./assset/image/gtav 200x150.jpg" alt="Juego 6">
+            <div class="game-text">
+                <div class="game-name">GTA V</div>
+                <div class="game-description">"Liberdade, ação e infinitas possibilidades em um <br>
+                     mundo onde você define as regras." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/QkkoHAzjnUs?si=Pg_PGQ-fvOSg2YKG" target="_blank">Trailer</a>
+                <a href="https://store.rockstargames.com/pt-BR/game/buy-gta-v" target="_blank">Comprar</a>
+                <a href="https://pt.wikipedia.org/wiki/Grand_Theft_Auto_V" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 7 -->
+        <div class="game-card">
+            <img src="./assset/image/rocketleague.jpg" alt="Juego 7">
+            <div class="game-text">
+                <div class="game-name">Rocket League</div>
+                <div class="game-description">"Velocidade, habilidade e adrenalina em uma <br>
+                     fusão épica de futebol e corrida." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/SgSX3gOrj60?si=5zEHMCS6ZtdjcXrH" target="_blank">Trailer</a>
+                <a href="https://store.epicgames.com/pt-BR/p/rocket-league" target="_blank">Baixar</a>
+                <a href="https://store.epicgames.com/pt-BR/p/rocket-league" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 8 -->
+        <div class="game-card">
+            <img src="./assset/image/cs2 200x150.jpg" alt="Juego 8">
+            <div class="game-text">
+                <div class="game-name">Counter strike 2</div>
+                <div class="game-description">"Estratégia, precisão e trabalho em equipe no <br>
+                     ápice do combate tático." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/c80dVYcL69E?si=27GnsEjGe9T_xXLt" target="_blank">Trailer</a>
+                <a href="https://www.counter-strike.net/cs2" target="_blank">Baixar</a>
+                <a href="https://www.counter-strike.net/news" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 9 -->
+        <div class="game-card">
+            <img src="./assset/image/final-fantasy-vii.png" alt="Juego 9">
+            <div class="game-text">
+                <div class="game-name">Final Fantasy vii rebirth</div>
+                <div class="game-description">A jornada rumo ao desconhecido continua...</div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/KOhs9ZLImgE?si=40LCx2gBx36Ayxa_" target="_blank">Trailer</a>
+                <a href="https://store.playstation.com/pt-br/product/UP0082-PPSA08666_00-0783148264580163" target="_blank">Comprar</a>
+                <a href="https://olhardigital.com.br/2024/04/20/games-e-consoles/o-que-preciso-saber-antes-de-jogar-final-fantasy-vii-rebirth/" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 10 -->
+        <div class="game-card">
+            <img src="./assset/image/astro bot.png" alt="Juego 10">
+            <div class="game-text">
+                <div class="game-name">Astro Bots</div>
+                <div class="game-description">A nave-mãe PS5 foi destruída, deixando ASTRO e <br>
+                                         sua tripulação de bots espalhada pelas galáxias. <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/unYFdcEjV9k?si=26SzC-83d15ML7HR" target="_blank">Trailer</a>
+                <a href="https://www.playstation.com/pt-br/games/astro-bot/" target="_blank">Comprar</a>
+                <a href="https://www.playstation.com/pt-br/games/astro-bot/" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 11 -->
+        <div class="game-card">
+            <img src="./assset/image/black-myth-wukong-jz9yr.jpg" alt="Juego 11">
+            <div class="game-text">
+                <div class="game-name">Black Myth Wukong</div>
+                <div class="game-description">"Black Myth: Wukong" é um jogo de ação e aventura inspirado na <br>
+                    mitologia chinesa, baseado na famosa história de "Viagem ao Oeste". <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/u83VdXAVq08?si=6wKTRZprC6PQkHTA" target="_blank">Trailer</a>
+                <a href="https://store.steampowered.com/app/2358720/Black_Myth_Wukong/?l=brazilian" target="_blank">Comprar</a>
+                <a href="https://olhardigital.com.br/2024/10/12/games-e-consoles/tudo-o-que-voce-precisa-saber-sobre-black-myth-wukong/" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 12 -->
+        <div class="game-card">
+            <img src="./assset/image/balatro-game.webp" alt="Juego 12">
+            <div class="game-text">
+                <div class="game-name">Balatro</div>
+                <div class="game-description">"Balatro é a voz da ironia, onde o humor e a crítica se <br>
+                    encontram em uma dança de sarcasmo e sabedoria." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/VUyP21iQ_-g?si=cC4N0SOZ9J_Fi5Qs" target="_blank">Trailer</a>
+                <a href="https://store.steampowered.com/app/2379780/Balatro/?l=brazilian" target="_blank">Comprar</a>
+                <a href="https://br.ign.com/balatro/133142/feature/balatro-resgata-verdadeira-essencia-dos-videogames-e-incomoda-por-ir-na-contramao-da-tendencia-de-le" target="_blank">Detalles</a>
+            </div>
+        </div>
+
+        <!-- Juego 13 -->
+        <div class="game-card">
+            <img src="./assset/image/metaphor.jpg" alt="Juego 13">
+            <div class="game-text">
+                <div class="game-name">Metaphor</div>
+                <div class="game-description">"Uma metáfora é a chave que abre portas para significados profundos,<br>
+                     conectando ideias de maneiras inesperadas." <br></div>
+            </div>
+            <div class="game-links">
+                <a href="https://youtu.be/SjbgJaYi4NE?si=BZjLMaLdgNG98INv" target="_blank">Trailer</a>
+                <a href="https://store.steampowered.com/app/2679460/Metaphor_ReFantazio/?l=portuguese" target="_blank">Comprar</a>
+                <a href="https://www.adrenaline.com.br/games/metaphor-refantazio-dos-criadores-de-persona-mostra-detalhes-de-gameplay/" target="_blank">Detalles</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
